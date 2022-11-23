@@ -2,8 +2,11 @@ const items = document.querySelector(".items");
 const searchUser = document.querySelector('#search');
 let users = []
 
+//import users from './users.json' assert {type: 'json'};
+//console.log(users);
+
 const fetchImages = () => {
-  fetch("https://api.github.com/users")
+  fetch("users.json")
     .then(res => { res.json()
       .then(res => {
           users = res;
